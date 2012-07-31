@@ -3,7 +3,7 @@ bgFade
 
 JQuery plugin to allow for the dynamic switching of full screen background images.
 
-This script relies on the accompanying css file in order to work.
+This script relies on the accompanying css file in order to work. The CSS was found [here](http://css-tricks.com/perfect-full-page-background-image/).
 
 An demo can be found [here](http://colinwaddell.com/bgfade/ "bgFade Demo").
 
