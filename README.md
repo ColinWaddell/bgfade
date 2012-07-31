@@ -1,7 +1,10 @@
 bgFade
 ======
 
-JQuery plugin to allow for the dynamic switching of full screen background images.
+JQuery plugin to allow for the dynamic switching of full screen background images. This script relies on the accompanying css file in order to work.
+
+An demo can be found [here](http://colinwaddell.com/bgfade/ "bgFade Demo").
+
 
 Initialising bgFade
 ======
@@ -19,7 +22,7 @@ Initialising: $.bgFade([options])
 When initially launching bgFade the following parameters can be used:
 
  * opacity: the final opacity of the background
- * fade: the time for the transission to complete. Legal values include:
+ * fade: the time for the transition to complete. Legal values include:
    - 0 - No fade
    - duration - the time to fade in milliseconds
    - "fast" - 200ms duration
@@ -42,26 +45,22 @@ Examples
 ======
 
 Launching bgFade and setting a background image:
+
     $(document).ready(function() {
         $.bgFade();
         $.bgFade('addSlide', 'bgsample.jpg');
     });
 
 This statement can be reduced to:
+
     $(document).ready(function() {
         $.bgFade().bgFade('addSlide', 'bgsample.jpg');
     });
 
 Launching bgFade with non-default settings is accomplished with:
-    $(document).ready(function() {
-        $.bgFade({opacity:0.5, fade: 'fast'});
-    });
+
+    $.bgFade({opacity:0.5, fade: 'fast'});
     
-Setting the background to be a colour with a new setting:
-    $(document).ready(function() {
-        $.bgFade().bgFade('addColour', '#00FFA0', {opacity:0.75});
-    });
-    
-    
-    
-    
+Setting the background to a new colour with new settings:
+
+    $.bgFade('addColour', '#00FFA0', {opacity:0.75});
