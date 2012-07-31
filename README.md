@@ -13,8 +13,8 @@ Initialising bgFade
 
 Both the js and the css must be included in your page along with a recent version of jQuery.
 
-  <script src="jquery.bgfade.js"></script>
-	<link rel="stylesheet" href="jquery.bgfade.css" type="text/css" media="all" />
+    <script src="jquery.bgfade.js"></script>
+    <link rel="stylesheet" href="jquery.bgfade.css" type="text/css" media="all" />
 
 bgFade can then be initialised:
 
