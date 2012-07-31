@@ -2,7 +2,7 @@
 
 	bgFade - Fullscreen Background Fader Plugin
 	Version : 0.1
-	Site	: www.colinwaddell.com/wordpress/bgFade
+	Site	: http://colinwaddell.com/wordpress/bgfade-jquery-plugin/
 	
 	Author	: Colin Waddell
 	Company : Colin Waddell.com
