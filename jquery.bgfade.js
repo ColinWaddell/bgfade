@@ -47,10 +47,16 @@
 
 	addSlide: function(url, options) {
 		$(document).ready(function() {
-			$.extend($("body").data('bgFade').opts, options);
-			internals.createActiveSlide();
-			$(".bgFadeActive").css({"background":"url("+url+")", "opacity": 0});
-			internals.fadeSlides();
+			// Preload image before performing fade
+			$('<img />')
+			    .attr('src', url)
+			    .load(function(){
+			        $('.profile').append( $(this) );
+			        $.extend($("body").data('bgFade').opts, options);
+					internals.createActiveSlide();
+					$(".bgFadeActive").css({"background":"url("+url+")", "opacity": 0});
+					internals.fadeSlides();
+			    });
 		});
 	},
 
