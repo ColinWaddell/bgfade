@@ -38,9 +38,30 @@ The following methods are available
 At any point new options may be applied to bgFade.
 
 
-  $(document).ready(function() {
-    // Create the an instanace of the fader and set it's color to red.
-    // These statements can be comounded for brevity.
-    $.bgFade();
-    $.bgFade('addColor','red');
-  });
+Examples
+======
+
+Launching bgFade and setting a background image:
+    $(document).ready(function() {
+        $.bgFade();
+        $.bgFade('addSlide', 'bgsample.jpg');
+    });
+
+This statement can be reduced to:
+    $(document).ready(function() {
+        $.bgFade().bgFade('addSlide', 'bgsample.jpg');
+    });
+
+Launching bgFade with non-default settings is accomplished with:
+    $(document).ready(function() {
+        $.bgFade({opacity:0.5, fade: 'fast'});
+    });
+    
+Setting the background to be a colour with a new setting:
+    $(document).ready(function() {
+        $.bgFade().bgFade('addColour', '#00FFA0', {opacity:0.75});
+    });
+    
+    
+    
+    
