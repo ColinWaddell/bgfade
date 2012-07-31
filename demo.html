@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>bgFade JQuery Plugin - ColinWaddell.com</title>
+	
+
+		
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="jquery.bgfade.js"></script>
+	<link rel="stylesheet" id="bgfade-style"  href="jquery.bgfade.css" type="text/css" media="all" />
+	
+	<script>
+		$(document).ready(function() {
+			// Create the an instanace of the fader and set it's color to red.
+			// These statements can be comounded for brevity.
+			$.bgFade();
+			$.bgFade('addColor','red');
+		});
+	</script>
+	
+	<style>
+		a{background: white;}
+	</style>
+	
+</head>
+<body>
+ 
+	<a onClick="$.bgFade('addSlide', 'bgsample.jpg');" href="#">Click here to load a background image.</a>
+	<br />
+	<a onClick="$.bgFade('addColor', '#'+((1<<24)*Math.random()|0).toString(16));" href="#">Click here to load a random background colour.</a>
+ 
+</body>
+</html>
