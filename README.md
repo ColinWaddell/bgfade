@@ -29,6 +29,7 @@ When initially launching bgFade the following parameters can be used:
    - duration - the time to fade in milliseconds
    - "fast" - 200ms duration
    - "slow" - 600ms duration
+ * showLoading: show a "loading" spinner whilst preloading background image
 
 Methods: $.bgFade('method', 'value', [options])
 ======
@@ -71,7 +72,6 @@ ToDo
 ======
 
  * Cross-platform testing
- * Some form of "Loading" indicator (possibly a spinner?)
  * Error handling
  * More transitions 
  * Better IE support 

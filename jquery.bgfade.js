@@ -16,7 +16,7 @@
 	// private methods
 	createActiveSlide: function() {
 		$(".bgFadeActive").removeClass("bgFadeActive");	
-		$("ul#bgFade").append('<li id="bgFade" class="bgFadeActive"></li>');
+		$("ul#bgFade").append('<li id="bgFade" class="bgFadeActive cover"></li>');
 	},
 
 	fadeSlides: function()
@@ -40,6 +40,7 @@
       if ( ! data ) {
 			$("body").append('<ul id="bgFade"></ul>');
 			$body.data('bgFade', {opts: opts});
+			$('<img />').attr('src', 'img/loading.gif'); //preload "loading" image
       };
 
       return this;  // For chaining
@@ -47,10 +48,18 @@
 
 	addSlide: function(url, options) {
 		$(document).ready(function() {
-			// Preload image before performing fade
+			// If required show loading image.
+			if ($("body").data('bgFade').opts.showLoading)
+				$("ul#bgFade").append('<li id="bgFadeLoader"></li>'); 
+				
+			// Preload image before performing fade.
 			$('<img />')
 			    .attr('src', url)
 			    .load(function(){
+					// Hide loading image
+					if ($("body").data('bgFade').opts.showLoading)
+						$("li#bgFadeLoader").remove();
+						
 			        $('.profile').append( $(this) );
 			        $.extend($("body").data('bgFade').opts, options);
 					internals.createActiveSlide();
@@ -84,7 +93,8 @@
   //	defaults
   $.bgFade.defaults = {
 		opacity: 1,
-		fade: "slow"  
+		fade: "slow"  ,
+		showLoading: true
 	};
 
 })(jQuery);
