@@ -66,3 +66,13 @@ Launching bgFade with non-default settings is accomplished with:
 Setting the background to a new colour with new settings:
 
     $.bgFade('addColour', '#00FFA0', {opacity:0.75});
+    
+ToDo
+======
+
+ * Cross-platform testing
+ * Some form of "Loading" indicator (possibly a spinner?)
+ * Error handling
+ * More transitions 
+ * Better IE support 
+   - [more](http://cookbooks.adobe.com/post_Scale_Background_image_to_browser_size-17590.html)
