@@ -40,7 +40,7 @@
       if ( ! data ) {
 			$("body").append('<ul id="bgFade"></ul>');
 			$body.data('bgFade', {opts: opts});
-			$('<img />').attr('src', 'img/loading.gif'); //preload "loading" image
+			$('<img />').attr('src', 'img/loading.png'); //preload "loading" image
       };
 
       return this;  // For chaining
